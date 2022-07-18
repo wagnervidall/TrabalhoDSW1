@@ -1,0 +1,123 @@
+
+<html lang="pt-br" charset="UTF-8">
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  type =" text/css" href="formulario.css" media="">
+    
+        <script>
+            function esta_preenchido(name) {
+                let value = document.forms["meu_formulario"][name].value
+    
+                if (value == "") {
+                    alert(name + " precisa ser preenchido");
+                    return false;
+                }
+                return true;
+            }
+    
+            function validar_form() {
+                if (esta_preenchido("nome") & validar_cep()){
+                    alert("Cadastro realizado com sucesso");
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            function validar_cep(){
+                let value = document.forms["meu_formulario"]["cep"].value;
+    
+                if(value.length==7){
+                    return true;
+                }else{ 
+                    alert("CEP invalido");
+                    return false;
+                }
+            }
+        </script>
+    
+        <title>Formulario</title>
+    </head>
+    <body>
+        <div id="area">
+        <div>
+            <h1>Formulário de Cadastro </h1>
+            <br>
+        </div>
+        
+        <form id="formulario" action="paginaprincipal.html" name="meu_formulario" onsubmit="return validar_form()" method="post" target="paginaprincipal.html">
+            <fieldset>
+                <div>
+                    <label> Nome</label>
+                    <input type="text" placeholder="Digite seu nome" name="nome" id="nome"><br><br>
+                </div>
+                <div>
+                    <label>Sobrenome</label>
+                    <input type="text" placeholder="Digite seu sobrename" name="Sobrenome"id="Sobrename"required><br><br>
+                </div>
+                <div>
+                    <label>Data de nascimento</label>
+                    <input type="date" placeholder="dd/mm/aaaa" name="datadenascimento"id="data de nascimento"required><br><br>
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input type="tex" placeholder="Digite seu numero" name="Telefone"id="telefone"required><br><br>
+                </div>
+                <div>
+                    <label>E-mail</label>
+                    <input type="email" placeholder="Digite seu e-mail" name="E-mail"id="E-mail"required><br><br>
+                </div>
+                
+                <div>
+                    <label>Sexo</label>
+                        <input type="radio" name="devweb" value="feminino" id="rd_feminino"> 
+                        <label for="rd_feminino">Feminino</label>               
+                        <input type="radio" name="devweb" value="masculino" id="rd_masculino"> 
+                        <label for="rd_masculino">Masculino</label>
+                    <br><br>
+                </div>
+                
+                <div>
+                    <label>Possui deficiência?</label>
+                    <select id="pais">
+                        <option selected disabled value ="">Selecione</option>
+                        <option>SIM</option>
+                        <option>NAO</option>
+                    </select>
+                    <br><br>
+                 <div>
+                    <label>Endereço</label>
+                    <input type="text" placeholder="CEP"  name="cep"id="Endereço"required><br><br>
+                    <input type="text" placeholder="Endereço"  name="Endereço"id="Endereço"required><br><br> 
+                    <input type="text" placeholder="Cidade"  name="Endereço"id="Endereço"required><br><br>
+                    <input type="text" placeholder="Estado"  name="Endereço"id="Endereço"required><br><br>
+                    <input type="text" placeholder="País"  name="Endereço"id="Endereço"required><br><br>
+                </div>
+                <div>
+                    <form action="/action_page.php">Anexo
+                        <input type="file" id="arquivo" name="arquivo" accept=".png,.jpeg,.pdf">
+                    </form>
+                    <br><br>
+                </div>
+                     <br>
+    
+                    <script>
+                        function limpar() {
+                            alert("Formulario limpo!");
+                        }
+    
+                        function enviar(){
+                            alert("Cadastro efetuado com sucesso!");
+                        }
+                    </script>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                <button><a href="HTML - trabalho.html">Voltar</button></a> 
+    
+            </fieldset>
+        </form>
+    </div>
+    
+    </body>
+    </html>

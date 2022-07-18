@@ -1,0 +1,82 @@
+#area
+{
+    position:relative;
+    left: 37%;
+    top: 29%;
+    width: 620px;
+    height: 270px;
+}
+#area #formulario 
+{ 
+    position:absolute;
+    display: block;
+
+} 
+fieldset
+{
+    width: 100%;
+    height: 250%;
+    background-color: rgb(14, 130, 238);
+}
+legend
+{
+    font:bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#Nome
+{
+    position:absolute;
+    left: 95px;
+    margin-top:2px ;
+    width: 225;
+}
+#Sobrenome
+{
+    position:absolute;
+    left: 95px;
+    margin-top:2px ;
+    width: 225;
+}
+#Idade
+{
+    position:absolute;
+    left: 95px;
+    margin-top:2px ;
+    width: 225;
+}
+#Telefone
+{
+    position:absolute;
+    left: 95px;
+    margin-top:2px ;
+    width: 225;
+}
+#E-mail
+{
+    position:absolute;
+    left: 95px;
+    margin-top:2px ;
+    width: 225;
+}
+#Endereço
+{
+    position:absolute;
+    left: 95px;
+    margin-top:2px ;
+    width: 225;
+}
+#Nome
+{
+    position:absolute;
+    left: 95px;
+    margin-top:2px ;
+    width: 225;
+}
+.button {
+    transition-duration: 0.4s;
+  }
+.button:hover{
+    background-color: #4CAF50; 
+    color: white;
+  }
